@@ -129,7 +129,7 @@
     fetch('jsonFotos/animais.json')
       .then(response => response.json())
       .then(imageFiles => {
-        const imagePath = "/animais/"; // Caminho para as imagens
+        const imagePath = "https://gabrie345.github.io/LinktreeTatoo/animais/"; // Caminho para as imagens
         const carouselContainer = document.getElementById('carousel-images');
 
         imageFiles.forEach((fileName, index) => {
