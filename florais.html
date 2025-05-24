@@ -107,7 +107,7 @@
   <div class="container">
     <a href="portifolio.html" class="back-button">← Voltar</a>
 
-    <h2 class="section-title">Florais 👇🏻</h2>
+    <h2 class="section-title">florais 👇🏻</h2>
     
     <div class="carousel">
       <div class="carousel-images" id="carousel-images">
@@ -126,10 +126,10 @@
   </a>
 
   <script>
-    fetch('jsonFotos/Florais.json')
+    fetch('jsonFotos/florais.json')
       .then(response => response.json())
       .then(imageFiles => {
-        const imagePath = "/Florais/"; // Caminho para as imagens
+        const imagePath = "/florais/"; // Caminho para as imagens
         const carouselContainer = document.getElementById('carousel-images');
 
         imageFiles.forEach((fileName, index) => {
