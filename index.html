@@ -29,13 +29,17 @@
       gap: 20px;
     }
 
-    .section-title {
-      font-size: 28px;
-      font-weight: bold;
-      margin: 30px 0 10px 0;
-      text-align: center;
-      width: 100%;
-    }
+.section-title {
+    position: absolute;
+    top: 10px; /* distância do topo */
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 30px;
+    font-weight: bold;
+    color: #ffb900; /* mantém branco */
+    padding: 10px 10px; /* espaçamento */
+    border-radius: 5px; /* borda arredondada */
+  }
 
     .location-text {
       font-size: 0.85em;   /* fonte menor */
@@ -55,18 +59,18 @@
     .image-section img {
       width: 100%;
       display: block;
-      filter: grayscale(100%) brightness(0.5);
+      filter: grayscale(50%) brightness(0.7);
     }
 
-    .overlay-text {
-      position: absolute;
-      top: 20%;
-      left: 50%;
-      transform: translate(-50%, -20%);
-      text-align: center;
-      padding: 0 10px;
+  .overlay-text {
+    position: absolute;
+    bottom: 10px; /* fixa na parte inferior com uma margem */
+    left: 50%;
+    transform: translateX(-50%); /* centraliza horizontalmente */
+    text-align: center;
+    padding: 0 10px;
+    width: 100%;
     }
-
     .overlay-text h2 {
       font-size: 1.5em;
       font-weight: bold;
@@ -84,7 +88,7 @@
       width: 100%;
       padding: 12px;
       margin: 10px 0;
-      background-color: #FFD700;
+      background-color: #ffb900;
       color: #000;
       text-align: center;
       border: none;
@@ -181,58 +185,60 @@
     vertical-align: middle;
     margin-right: 8px;
   }
+.fixed-message {
+  position: fixed;
+  bottom: 10px; /* distância da borda inferior */
+  right: 10px;  /* distância da borda direita */
+  background-color: #FFD700;
+  color: #000;
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 1000; /* garante que fique sobre outros elementos */
+  }
+
 </style>
 </head>
 <body>
   <div class="container">
-    <div class="section-title">Delakaytattoo</div>
+    <div class="fixed-message">
+      Restam 7 vagas!
+    </div>
     <p class="location-text">Osasco SP - Balneario SC</p>
-<div>
-    <div class="image-section">
-        <img src="kayt desenhando.jpg" alt="Tatuadora" />
-    <div class="overlay-text">
-        <h2>Ideia. Estilo.<br />Experiência.<br />Qualidade.</h2>
-        <p>Se isso é importante pra você — somos o estúdio certo.</p>
-    </div>
-    </div class="image-section">
-  
-   <a href="https://api.whatsapp.com/send/?phone=5511974585154&text=Ol%C3%A1%2C%20sou%20de%20BC%20e%20preciso%20de%20um%20or%C3%A7amento.%20Pode%20ajudar%3F&type=phone_number&app_absent=0" class="button maps">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon">
-  Orçamento BC
-  </a>
-  <a href="https://api.whatsapp.com/send/?phone=5511974585154&text=Ol%C3%A1%2C%20sou%20de%20SP%20e%20preciso%20de%20um%20or%C3%A7amento.%20Pode%20ajudar%3F&type=phone_number&app_absent=0" class="button maps">
-  <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon">
-  Orçamento SP
-  </a>
-<a href="#cuidados" class="button">Cuidados Com a Tattoo</a>
-    <a href="portifolio.html" class="button">Portifolio</a>
-    <div class="second-block">
-        <div class="carousel">
-            <div class="carousel-images">
-                <img src="tatuagem1.jpg" alt="Tattoo 1">
-                <img src="tatuagem2.jpg" alt="Tattoo 2">
-                <img src="tatuagem1.jpg" alt="Tattoo 3">
-            </div>
-            <button class="prev">&#10094;</button>
-            <button class="next">&#10095;</button>
+    <div>
+        <div class="image-section">
+            <img src="kayt desenhando.png" alt="Tatuadora" />
+          <div class="section-title">Delakaytattoo</div>
+          <div class="overlay-text">
+            <h2>Experiência.<br />Qualidade .<br />Exclusividade.</h2>
         </div>
-    </div>
-    <div id="cuidados" class="care-block" style="margin-top: 30px;">
+        </div class="image-section">
+      
+      <a href="https://api.whatsapp.com/send/?phone=5511974585154&text=Ol%C3%A1%2C%20sou%20de%20BC%20e%20preciso%20de%20um%20or%C3%A7amento.%20Pode%20ajudar%3F&type=phone_number&app_absent=0" class="button maps">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon">
+      Orçamento BC
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=5511974585154&text=Ol%C3%A1%2C%20sou%20de%20SP%20e%20preciso%20de%20um%20or%C3%A7amento.%20Pode%20ajudar%3F&type=phone_number&app_absent=0" class="button maps">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon">
+      Orçamento SP
+      </a>
+      <a href="portifolio.html" class="button">Portifolio</a>
+      <a href="Autorias.html" class="button">Autorias disponíveis</a>
+
         <div class="second-block">
             <div class="carousel">
                 <div class="carousel-images">
-                    <img src="oquenaofazer1.png" alt="Tattoo 1">
-                    <img src="oquenaofazer2.png" alt="Tattoo 2">
-                    <img src="oquenaofazer3.png" alt="Tattoo 3">
+                    <img src="tatuagem1.jpg" alt="Tattoo 1">
+                    <img src="tatuagem2.jpg" alt="Tattoo 2">
+                    <img src="tatuagem1.jpg" alt="Tattoo 3">
                 </div>
                 <button class="prev">&#10094;</button>
                 <button class="next">&#10095;</button>
             </div>
         </div>
-</div>
-
-</div>
-</div>
+    </div>
+  </div>
 
 <script>
   const carousels = document.querySelectorAll('.carousel');
