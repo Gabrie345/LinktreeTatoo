@@ -129,7 +129,7 @@
     fetch('jsonFotos/flash.json')
       .then(response => response.json())
       .then(imageFiles => {
-        const imagePath = "\\flash/"; // Caminho para as imagens
+        const imagePath = "/LinktreeTatoo/flash/"; // Caminho para as imagens
         const carouselContainer = document.getElementById('carousel-images');
 
         imageFiles.forEach((fileName, index) => {
