@@ -9,7 +9,7 @@
   <title>Delakaytattoo - Tatuadora</title>
   <link rel="stylesheet" href="estilo.css">
   <link rel="icon" href="icone/pincel-grande.png" type="image/png" />
-
+  
 </head>
 
 <body>
@@ -62,6 +62,11 @@
   <section>
     <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3657.9513550526467!2d-46.77349762391506!3d-23.53425196059815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ceff14236e2f9d%3A0x92ae39598fa5584d!2sAv.%20Hil%C3%A1rio%20Pereira%20de%20Souza%2C%20406%20-%20Centro%2C%20Osasco%20-%20SP%2C%2006010-170!5e0!3m2!1spt-BR!2sbr!4v1748264458890!5m2!1spt-BR!2sbr" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>  </main>
   <script>
+    const fixedMessage = document.querySelector('.fixed-message');
+    const vagas = [6, 7, 7, 7, 8];
+    const indiceAleatorio = Math.floor(Math.random() * vagas.length);
+    fixedMessage.textContent = `Restam ${vagas[indiceAleatorio]} vagas!`;
+
     const carousels = document.querySelectorAll('.carousel');
     carousels.forEach(carousel => {
       const imagesContainer = carousel.querySelector('.carousel-images');
