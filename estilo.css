@@ -46,6 +46,38 @@ body {
   padding: 10px;
   border-radius: 5px;
 }
+.titulo{
+  text-align: center; 
+  width: 100%; 
+  color: var(--cor-destaque);
+}
+.tituloAutorais{
+  text-align: center; 
+  width: 100%; 
+  color: var(--cor-texto);
+  font-size: 0.8rem;
+  margin-bottom: 5px;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: #d3d3d3; /* cinza claro */
+  color: #333;
+  padding: 5px 5px;         /* menor tamanho */
+  border-radius: 6px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 0.5rem;         /* tamanho menor */
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 15px;       /* espaçamento abaixo do botão */
+}
+
+
+.back-button:hover {
+  background-color: #bbb; /* cinza um pouco mais escuro no hover */
+  color: #000;
+}
+
 
 .location-text {
   font-size: 0.85em;
