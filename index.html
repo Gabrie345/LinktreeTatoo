@@ -197,7 +197,28 @@
   box-shadow: 0 0 10px rgba(0,0,0,0.3);
   z-index: 1000; /* garante que fique sobre outros elementos */
   }
+  .bio {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+    margin-bottom: 20px;
+  }
 
+  .bio img {
+    width: 30%;
+    height: 30%;
+    border-radius: 50%;
+    object-fit: cover;
+    flex-shrink: 0;
+    filter: grayscale(50%) brightness(0.7);
+  }
+
+  .bio p {
+    font-size: 14px;
+    line-height: 1.4;
+    color: #fff;
+  }
 </style>
 </head>
 <body>
@@ -225,7 +246,13 @@
       </a>
       <a href="portifolio.html" class="button">Portifolio</a>
       <a href="Autorias.html" class="button">Autorias disponíveis</a>
-
+      <a href="Autorias.html" class="button">Autorias disponíveis</a>
+    <div class="bio">
+      <img src="fotoBio.jpg" alt="Minha Foto">
+      <p>
+        Oi, eu sou a Catarine, mais conhecida como Kayt. Sou tatuadora há 10 anos e minhas especialidades são blackwork e fine line. Sempre gostei muito de desenhar, e hoje tenho o prazer de trabalhar com o que amo.      
+      </p>
+    </div>
         <div class="second-block">
             <div class="carousel">
                 <div class="carousel-images">
