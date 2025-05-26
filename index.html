@@ -1,300 +1,92 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
 <html lang="pt-BR">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Linktree Tatuadora</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <meta name="description" content="Tatuadora especializada em blackwork e fine line. Atendimento em Osasco - SP e Balneário Camboriú - SC." />
+  <meta name="keywords" content="tatuadora, blackwork, fine line, tatuagem, Osasco, Balneário Camboriú" />
+  <meta name="author" content="Catarine - Delakaytattoo" />
+  <title>Delakaytattoo - Tatuadora Blackwork e Fine Line</title>
+  <link rel="stylesheet" href="estilo.css">
+  <link rel="icon" href="icone/pincel-grande.png" type="image/png" />
 
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #000;
-      color: #fff;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .container {
-      width: 100%;
-      max-width: 400px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-    }
-
-.section-title {
-    position: absolute;
-    top: 10px; /* distância do topo */
-    left: 50%;
-    transform: translateX(-50%);
-    font-size: 30px;
-    font-weight: bold;
-    color: #ffb900; /* mantém branco */
-    padding: 10px 10px; /* espaçamento */
-    border-radius: 5px; /* borda arredondada */
-  }
-
-    .location-text {
-      font-size: 0.85em;   /* fonte menor */
-      text-align: center;  /* centralizado */
-      margin-bottom: 15px; /* um espacinho embaixo */
-      color: #fff;
-    }
-
-    .image-section {
-      position: relative;
-      width: 100%;
-      border-radius: 10px;
-      overflow: hidden;
-      box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    }
-
-    .image-section img {
-      width: 100%;
-      display: block;
-      filter: grayscale(50%) brightness(0.7);
-    }
-
-  .overlay-text {
-    position: absolute;
-    bottom: 10px; /* fixa na parte inferior com uma margem */
-    left: 50%;
-    transform: translateX(-50%); /* centraliza horizontalmente */
-    text-align: center;
-    padding: 0 10px;
-    width: 100%;
-    }
-    .overlay-text h2 {
-      font-size: 1.5em;
-      font-weight: bold;
-      line-height: 1.1;
-      color: #fff;
-    }
-
-    .overlay-text p {
-      margin-top: 10px;
-      font-size: 0.9em;
-    }
-
-    .button {
-      display: block;
-      width: 100%;
-      padding: 12px;
-      margin: 10px 0;
-      background-color: #ffb900;
-      color: #000;
-      text-align: center;
-      border: none;
-      border-radius: 8px;
-      font-size: 14px;
-      font-weight: bold;
-      text-decoration: none;
-      transition: background-color 0.3s ease;
-      position: relative;
-      top: -20px;
-    }
-
-    .button:hover {
-      background-color: #e6c200;
-    }
-    .carousel {
-    position: relative;
-    width: 100%;
-    overflow: hidden;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
-    }
-
-    .carousel-images {
-    display: flex;
-    transition: transform 0.5s ease-in-out;
-    }
-
-    .carousel-images img {
-    width: 100%;
-    flex-shrink: 0;
-    }
-    .carousel button {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: rgba(0,0,0,0.5);
-    color: #fff;
-    border: none;
-    padding: 10px;
-    cursor: pointer;
-    font-size: 18px;
-    border-radius: 50%;
-    }
-
-    .carousel .prev {
-    left: 10px;
-    }
-
-    .carousel .next {
-        right: 10px;
-    }
-
-    .carousel button:hover {
-        background-color: rgba(255, 255, 255, 0.3);
-    }
-    .social-buttons {
-        display: flex;
-        gap: 1rem;
-        justify-content: flex-start;
-        align-items: center;
-        margin-top: 1rem;
-    }
-
-    .social-button {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 40px;
-    height: 40px;
-    border-radius: 50%;
-    background-color: #000000; /* fundo branco */
-    border: 2px solid #000000; /* borda preta */
-    text-decoration: none;
-    transition: background-color 0.3s, transform 0.3s;
-    }
-
-    .social-button svg {
-    width: 20px;
-    height: 20px;
-    fill: #fcfcfc; /* cor do ícone em preto */
-    }
-
-    .social-button:hover {
-    background-color: #f0f0f0;
-    transform: scale(1.1);
-    }
-    .care-block {
-         margin-top: 30px; /* Ajuste o valor conforme necessário */
-    }
-  .whatsapp-icon {
-    width: 16px;
-    height: 16px;
-    vertical-align: middle;
-    margin-right: 8px;
-  }
-.fixed-message {
-  position: fixed;
-  bottom: 10px; /* distância da borda inferior */
-  right: 10px;  /* distância da borda direita */
-  background-color: #FFD700;
-  color: #000;
-  padding: 10px 15px;
-  border-radius: 8px;
-  font-weight: bold;
-  box-shadow: 0 0 10px rgba(0,0,0,0.3);
-  z-index: 1000; /* garante que fique sobre outros elementos */
-  }
-  .bio {
-    display: flex;
-    align-items: center;
-    margin-top: 20px;
-    gap: 15px;
-    margin-bottom: 20px;
-  }
-
-  .bio img {
-    width: 30%;
-    height: 30%;
-    border-radius: 50%;
-    object-fit: cover;
-    flex-shrink: 0;
-    filter: grayscale(50%) brightness(0.7);
-  }
-
-  .bio p {
-    font-size: 14px;
-    line-height: 1.4;
-    color: #fff;
-  }
-</style>
 </head>
+
 <body>
-  <div class="container">
-    <div class="fixed-message">
-      Restam 7 vagas!
-    </div>
-    <p class="location-text">Osasco SP - Balneário Camboriú - SC</p>
-    <div>
-        <div class="image-section">
-            <img src="kayt desenhando.png" alt="Tatuadora" />
-          <div class="section-title">Delakaytattoo</div>
-          <div class="overlay-text">
-            <h2>Experiência.<br />Qualidade .<br />Exclusividade.</h2>
-        </div>
-        </div class="image-section">
-      
-      <a href="https://api.whatsapp.com/send/?phone=5511974585154&text=Ol%C3%A1%2C%20sou%20de%20BC%20e%20preciso%20de%20um%20or%C3%A7amento.%20Pode%20ajudar%3F&type=phone_number&app_absent=0" class="button maps">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon">
-      Orçamento BC
+  <header>
+    <p class="location-text">Osasco - SP | Balneário Camboriú - SC</p>
+    <div class="fixed-message">Restam 7 vagas!</div>
+  </header>
+
+  <main class="container">
+    <section class="image-section">
+      <img src="fotosBio/kayt desenhando.png" alt="Tatuadora Kayt desenhando">
+      <h1 class="section-title">Delakaytattoo</h1>
+      <div class="overlay-text">
+        <h2>Experiência.<br>Qualidade.<br>Exclusividade.</h2>
+      </div>
+    </section>
+
+    <section>
+      <a href="https://api.whatsapp.com/send/?phone=5511974585154&text=Olá%2C%20sou%20de%20BC%20e%20preciso%20de%20um%20orçamento.%20Pode%20ajudar%3F" class="button">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon">
+        Orçamento BC
       </a>
-      <a href="https://api.whatsapp.com/send/?phone=5511974585154&text=Ol%C3%A1%2C%20sou%20de%20SP%20e%20preciso%20de%20um%20or%C3%A7amento.%20Pode%20ajudar%3F&type=phone_number&app_absent=0" class="button maps">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon">
-      Orçamento SP
+
+      <a href="https://api.whatsapp.com/send/?phone=5511974585154&text=Olá%2C%20sou%20de%20SP%20e%20preciso%20de%20um%20orçamento.%20Pode%20ajudar%3F" class="button">
+        <img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp" class="whatsapp-icon">
+        Orçamento SP
       </a>
-      <a href="portifolio.html" class="button">Portifolio</a>
+
       <a href="Autorias.html" class="button">Autorias disponíveis</a>
-    <div class="bio">
-      <img src="fotoBio.jpg" alt="Minha Foto">
+    </section>
+
+    <section class="bio">
+      <img src="fotosBio/fotoBio.jpg" alt="Foto da tatuadora Kayt">
       <p>
-        Oi, eu sou a Catarine, mais conhecida como Kayt. Sou tatuadora há 10 anos e minhas especialidades são blackwork e fine line. Sempre gostei muito de desenhar, e hoje tenho o prazer de trabalhar com o que amo.      
+        Oi, eu sou a Catarine, mais conhecida como Kayt. Sou tatuadora há 10 anos, especializada em blackwork e fine line. Sempre gostei muito de desenhar, e hoje tenho o prazer de trabalhar com o que amo.
       </p>
-    </div>
-        <div class="second-block">
-            <div class="carousel">
-                <div class="carousel-images">
-                    <img src="tatuagem1.jpg" alt="Tattoo 1">
-                    <img src="tatuagem2.jpg" alt="Tattoo 2">
-                    <img src="tatuagem1.jpg" alt="Tattoo 3">
-                </div>
-                <button class="prev">&#10094;</button>
-                <button class="next">&#10095;</button>
-            </div>
-        </div>
-    </div>
-  </div>
+    </section>
 
-<script>
-  const carousels = document.querySelectorAll('.carousel');
+    <section class="carousel">
+      <div class="carousel-images">
+        <img src="tatuagem_Portifolio/tatoo01.jpg">
+        <img src="tatuagem_Portifolio/tatoo02.jpg">
+        <img src="tatuagem_Portifolio/tatoo03.jpg">
+        <img src="tatuagem_Portifolio/tatoo04.jpg">
+      </div>
+      <button class="prev" aria-label="Imagem anterior">&#10094;</button>
+      <button class="next" aria-label="Próxima imagem">&#10095;</button>
+    </section>
+  </main>
 
-  carousels.forEach(carousel => {
-    const imagesContainer = carousel.querySelector('.carousel-images');
-    const images = imagesContainer.querySelectorAll('img');
-    const prevBtn = carousel.querySelector('.prev');
-    const nextBtn = carousel.querySelector('.next');
+  <script>
+    const carousels = document.querySelectorAll('.carousel');
+    carousels.forEach(carousel => {
+      const imagesContainer = carousel.querySelector('.carousel-images');
+      const images = imagesContainer.querySelectorAll('img');
+      const prevBtn = carousel.querySelector('.prev');
+      const nextBtn = carousel.querySelector('.next');
 
-    let index = 0;
+      let index = 0;
 
-    function showImage() {
-      const width = images[0].clientWidth;
-      imagesContainer.style.transform = `translateX(${-index * width}px)`;
-    }
+      function showImage() {
+        const width = images[0].clientWidth;
+        imagesContainer.style.transform = `translateX(${-index * width}px)`;
+      }
 
-    nextBtn.addEventListener('click', () => {
-      index = (index + 1) % images.length;
-      showImage();
+      nextBtn.addEventListener('click', () => {
+        index = (index + 1) % images.length;
+        showImage();
+      });
+
+      prevBtn.addEventListener('click', () => {
+        index = (index - 1 + images.length) % images.length;
+        showImage();
+      });
+
+      window.addEventListener('resize', showImage);
     });
-
-    prevBtn.addEventListener('click', () => {
-      index = (index - 1 + images.length) % images.length;
-      showImage();
-    });
-
-    window.addEventListener('resize', showImage);
-  });
-</script>
-
+  </script>
 </body>
 </html>

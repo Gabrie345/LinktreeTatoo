@@ -1,0 +1,223 @@
+:root {
+  --cor-fundo: #000;
+  --cor-texto: #fff;
+  --cor-destaque: #ffb900;
+  --cor-destaque-hover: #e6c200;
+  --cor-mensagem: #FFD700;
+  --cor-clara: #f0f0f0;
+  --cor-sombra: rgba(255, 255, 255, 0.1);
+  --fundo-transparente: rgba(0,0,0,0.5);
+  --fundo-transparente-hover: rgba(255, 255, 255, 0.3);
+  --cor-icone: #fcfcfc;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: var(--cor-fundo);
+  color: var(--cor-texto);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+.container {
+  width: 100%;
+  max-width: 400px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.section-title {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 30px;
+  font-weight: bold;
+  color: var(--cor-destaque);
+  padding: 10px;
+  border-radius: 5px;
+}
+
+.location-text {
+  font-size: 0.85em;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.image-section {
+  position: relative;
+  width: 100%;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 0 15px var(--cor-sombra);
+}
+
+.image-section img {
+  width: 100%;
+  display: block;
+  filter: grayscale(50%) brightness(0.7);
+}
+
+.overlay-text {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  padding: 0 10px;
+  width: 100%;
+}
+
+.overlay-text h2 {
+  font-size: 1.5em;
+  font-weight: bold;
+  line-height: 1.1;
+}
+
+.overlay-text p {
+  margin-top: 10px;
+  font-size: 0.9em;
+}
+
+.button {
+  display: block;
+  width: 100%;
+  padding: 12px;
+  margin: 10px 0;
+  background-color: var(--cor-destaque);
+  color: var(--cor-fundo);
+  text-align: center;
+  border: none;
+  border-radius: 8px;
+  font-size: 14px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  position: relative;
+  top: -20px;
+}
+
+.button:hover {
+  background-color: var(--cor-destaque-hover);
+}
+
+.carousel {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 10px;
+  box-shadow: 0 0 15px var(--cor-sombra);
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex-shrink: 0;
+}
+
+.carousel button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: var(--fundo-transparente);
+  color: var(--cor-texto);
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+  font-size: 18px;
+  border-radius: 50%;
+}
+
+.carousel .prev { left: 10px; }
+.carousel .next { right: 10px; }
+
+.carousel button:hover {
+  background-color: var(--fundo-transparente-hover);
+}
+
+.social-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.social-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: var(--cor-fundo);
+  border: 2px solid var(--cor-fundo);
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.social-button svg {
+  width: 20px;
+  height: 20px;
+  fill: var(--cor-icone);
+}
+
+.social-button:hover {
+  background-color: var(--cor-clara);
+  transform: scale(1.1);
+}
+
+.whatsapp-icon {
+  width: 16px;
+  height: 16px;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+.fixed-message {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  background-color: var(--cor-mensagem);
+  color: var(--cor-fundo);
+  padding: 10px 15px;
+  border-radius: 8px;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(0,0,0,0.3);
+  z-index: 1000;
+}
+
+.bio {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.bio img {
+  width: 30%;
+  height: 30%;
+  border-radius: 50%;
+  object-fit: cover;
+  flex-shrink: 0;
+  filter: grayscale(50%) brightness(0.7);
+}
+
+.bio p {
+  font-size: 14px;
+  line-height: 1.4;
+}
