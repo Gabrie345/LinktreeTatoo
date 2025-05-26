@@ -24,7 +24,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px;
+  padding: 0; /* tirar o padding para o mapa ocupar 100% */
 }
 
 .container {
@@ -220,4 +220,10 @@ body {
 .bio p {
   font-size: 14px;
   line-height: 1.4;
+}
+.mapa {
+  width: 100vw;
+  height: 100vh;
+  border: 0;
+  display: block;
 }
